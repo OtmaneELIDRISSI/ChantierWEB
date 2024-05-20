@@ -3,11 +3,8 @@
 <head>
     <title>POUTRE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon1.jpg" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         .hero-button {
             background-color: #007bff; /* Bleu Bootstrap */
@@ -26,12 +23,10 @@
             background-color: #0056b3;
             transform: scale(1.05);
         }
-        .hero-image {
-            max-width: 50%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        #qr-reader {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -71,10 +66,8 @@
   <div class="text-center">
     <button class="hero-button" onclick="startScan()">Scanner pour savoir si le plan est à jour ou pas</button>
   </div>
-  <div class="text-center">
-    <div id="qr-reader" style="width: 300px; margin: 0 auto;"></div>
-    <div id="qr-reader-results"></div>
-  </div>
+  <div id="qr-reader" class="text-center mt-4"></div>
+  <div id="qr-reader-results" class="text-center mt-2"></div>
 
   <footer class="text-center text-lg-start bg-light text-muted">
     <br>
@@ -108,34 +101,22 @@
     </div>
   </footer>
 
-  <script src="bootstrap.bundle.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script>
     function startScan() {
-      let qrCodeSuccessCallback = (decodedText, decodedResult) => {
+      const html5QrCode = new Html5Qrcode("qr-reader");
+      const qrCodeSuccessCallback = (decodedText, decodedResult) => {
         console.log(`Code décodé: ${decodedText}`);
-        Swal.fire({
-          icon: 'success',
-          title: 'Code QR Scanné',
-          text: `URL: ${decodedText}`
-        });
-        document.getElementById("qr-reader-results").innerHTML = `<a href="${decodedText}" target="_blank">${decodedText}</a>`;
+        document.getElementById('qr-reader-results').innerHTML = `Code QR scanné: <a href="${decodedText}" target="_blank">${decodedText}</a>`;
         html5QrCode.stop().then(ignore => {
-          document.getElementById("qr-reader").innerHTML = "";
+          document.getElementById('qr-reader').style.display = 'none';
         }).catch(err => {
-          console.log("Impossible d'arrêter le lecteur de QR: ", err);
+          console.error("Impossible d'arrêter le lecteur de QR: ", err);
         });
       };
-
-      let html5QrCode = new Html5Qrcode("qr-reader");
-      html5QrCode.start(
-        { facingMode: "environment" }, 
-        {
-          fps: 10, 
-          qrbox: 250 
-        },
-        qrCodeSuccessCallback
-      ).catch(err => {
-        console.log("Erreur de démarrage du scanner QR: ", err);
+      const config = { fps: 10, qrbox: 250 };
+      html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback).catch(err => {
+        console.error("Erreur de démarrage du scanner QR: ", err);
       });
     }
   </script>
