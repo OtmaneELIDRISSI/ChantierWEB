@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ChantierWEB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon1.jpg" sizes="32x32" type="image/png">
+    <style>
+        .hero-button {
+            background-color: #007bff; /* Bleu Bootstrap */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .hero-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .hero-image {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">ChantierWEB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="projets.html">Voir Projet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#introduction">Qui sommes nous?</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item" style="margin-right:60px;">
+                    <a class="nav-link link" href="index.html#inputEmail">Contactez-nous</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<br><br><br>
+
+<div class="text-center">
+    <a href="https://autode.sk/3wzeDDS">
+        <button class="hero-button">
+            <h1>VOIR OBJET EN 3D</h1>
+            <p>Accédez ici à une représentation détaillée en 3D de l'objet, offrant une perspective précise et interactive pour une meilleure compréhension du projet</p>
+        </button>
+    </a>
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-11">
+            <figure class="figure">
+                <img src="22.jpg" class="figure-img img-fluid rounded" alt="Plan de ferraillage la poutre" style="width: 100%;">
+                <figcaption class="figure-caption text-center"><h2>Plan de ferraillage</h2></figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br><br><br><br><br>
+
+<div class="container" id="inputEmail">
+    <form>
+        <div class="form-group">
+            <h2>Veuillez saisir ici les écarts (défauts) que vous avez rencontrés afin d'alerter l'OPC</h2>
+            <label for="exampleFormControlInput1">Votre Identifiant</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Saisir ici votre Identifiant">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Qui êtes-vous?</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>Maître d'ouvrage</option>
+                <option>Architecte</option>
+                <option>Chef de projet</option>
+                <option>Chef de chantier</option>
+                <option>Sous-traitants</option>
+                <option>Coordinateur de sécurité</option>
+                <option>Bureau de contrôle</option>
+                <option>Entreprise générale de construction</option>
+                <option>Autre</option>
+            </select>
+        </div>
+        <br>
+        <h4>Veuillez choisir ici le type d'écart (défaut) que vous avez rencontré</h4>
+        <br>
+        <style>
+            .bg-green {
+                background-color: #28a745; /* Vert Bootstrap */
+                color: white;
+            }
+            .bg-orange {
+                background-color: #fd7e14; /* Orange Bootstrap */
+                color: white;
+            }
+            .bg-red {
+                background-color: #dc3545; /* Rouge Bootstrap */
+                color: white;
+            }
+        </style>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button bg-green" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Écart mineur
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <input type="radio" id="option1" name="accordionOption" class="form-check-input">
+                        <label class="form-check-label" for="option1">Anomalie apparente sur site, mais n'empêche pas le bon déroulement des travaux</label>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed bg-orange" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Écart à valider par l'unité concernée
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <input type="radio" id="option2" name="accordionOption" class="form-check-input">
+                        <label class="form-check-label" for="option2">Écart à valider par l'unité concernée, validation obligatoire pour continuer les travaux</label>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed bg-red" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Écart majeur
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <input type="radio" id="option3" name="accordionOption" class="form-check-input">
+                        <label class="form-check-label" for="option3">Écart majeur, le travail sera suspendu jusqu'à validation écrite pour continuer les travaux</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Expliquez l'écart</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlFile1" class="form-label">Ajouter une image</label>
+            <input type="file" class="form-control" id="exampleFormControlFile1" accept="image/*">
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Enregistrer un audio             </label><br>
+            <button type="button" class="btn btn-secondary" id="startRecording">Commencer l'enregistrement</button>
+            <button type="button" class="btn btn-secondary" id="stopRecording" disabled>Arrêter l'enregistrement</button>
+            <br>
+            <audio id="audioPlayback" controls></audio>
+            <input type="hidden" id="audioData" name="audioData">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        
+        <script>
+            let mediaRecorder;
+            let audioChunks = [];
+        
+            document.getElementById('startRecording').addEventListener('click', async () => {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.start();
+        
+                mediaRecorder.addEventListener('dataavailable', event => {
+                    audioChunks.push(event.data);
+                });
+        
+                mediaRecorder.addEventListener('stop', () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    const audio = document.getElementById('audioPlayback');
+                    audio.src = audioUrl;
+        
+                    const reader = new FileReader();
+                    reader.readAsDataURL(audioBlob);
+                    reader.onloadend = () => {
+                        const base64data = reader.result;
+                        document.getElementById('audioData').value = base64data;
+                    };
+                });
+        
+                document.getElementById('startRecording').disabled = true;
+                document.getElementById('stopRecording').disabled = false;
+            });
+        
+            document.getElementById('stopRecording').addEventListener('click', () => {
+                mediaRecorder.stop();
+                document.getElementById('startRecording').disabled = false;
+                document.getElementById('stopRecording').disabled = true;
+            });
+        </script>
+    </form>
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+<footer class="text-center text-lg-start bg-light text-muted">
+    <br>
+    <section>
+        <div class="text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h4 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>ChantierWEB
+                    </h4>
+                    <p>Une plateforme dédiée à la gestion et au suivi des projets de construction en temps réel.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Produits</h6>
+                    <p><a href="#!" class="text-reset">Planning</a></p>
+                    <p><a href="#!" class="text-reset">Suivi des tâches</a></p>
+                    <p><a href="#!" class="text-reset">Rapports</a></p>
+                    <p><a href="#!" class="text-reset">Notifications</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Liens utiles</h6>
+                    <p><a href="#!" class="text-reset">Tarification</a></p>
+                    <p><a href="#!" class="text-reset">Paramètres</a></p>
+                    <p><a href="#!" class="text-reset">Commandes</a></p>
+                    <p><a href="#!" class="text-reset">Aide</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i>Berrechid </p>
+                    <p><i class="fas fa-envelope me-3"></i> info@chantierweb.com</p>
+                    <p><i class="fas fa-phone me-3"></i> +212 622 784 086</p>
+                    <p><i class="fas fa-print me-3"></i> +212 664 513 280</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 ChantierWEB. Tous droits réservés.
+    </div>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>POUTRE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon1.jpg" sizes="32x32" type="image/png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function goToProject() {
+            const projectInput = document.getElementById('exampleDataList').value;
+            let href = '';
+            
+            switch (projectInput) {
+                case 'BOUSKOURA MALL MAZARINE':
+                    href = 'BOUSKOURA_MALL_MAZARINE.html';
+                    break;
+                case 'AIN CHOK AL FALAH':
+                    href = 'ain_chok_al_falah.html';
+                    break;
+                case 'TOUR EL OULFA':
+                    href = 'tour_el_oulfa.html';
+                    break;
+                case 'BOURKOURA KISARIA':
+                    href = 'bourkoura_kisaria.html';
+                    break;
+                default:
+                    alert('Projet non trouvé');
+                    return;
+            }
+            
+            window.location.href = href;
+        }
+    </script>
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">ChantierWEB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="projets.html">Voir Projet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SCANQR.html">Le plan est à jour?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#introduction">Qui sommes nous?</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li style="margin-right:60px;" class="nav-item">
+            <a class="nav-link link" href="index.html#inputEmail">Contactez-nous</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <br><br><br><br><br><br><br><br>
+
+  <div class="container" id="inputEmail">
+    <form>
+      <div class="form-group">
+        <h2>Vous trouverez ici votre projet</h2>
+        <label for="exampleFormControlInput1">Votre Identifiant</label>
+        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Saisir ici votre Identifiant">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Qui êtes vous?</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Maître d'ouvrage</option>
+          <option>Architecte</option>
+          <option>Chef de projet</option>
+          <option>Chef de chantier</option>
+          <option>Sous-traitants</option>
+          <option>Coordinateur de sécurité</option>
+          <option>Bureau de contrôle</option>
+          <option>Entreprise générale de construction</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <br>
+      <div class="container">
+        <label for="exampleDataList" class="form-label">Choisir votre projet</label>
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Saisir ici le projet">
+        <datalist id="datalistOptions">
+          <option value="BOUSKOURA MALL MAZARINE">
+          <option value="AIN CHOK AL FALAH">
+          <option value="TOUR EL OULFA">
+          <option value="BOURKOURA KISARIA">
+        </datalist>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="goToProject()">Accéder au Projet</button>
+      </div>
+    </form>
+    <br><br><br><br>
+  </div>
+
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <br>
+    <section>
+      <div class="text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h4 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>ChantierWEB
+            </h4>
+            <h4>Site réalisé par:</h4>
+            <h6>- Otmane Abou ElOuafa ElIdrissi<br></h6>
+            <h4>Encadré par:</h4>
+            <h6>- Phd RAMADAN<br></h6>
+            <h6>- Phd SABER KOREICH<br></h6>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-6">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-7"></i> UIC</p>
+            <p><i class="fas fa-envelope me-3"></i> ChantierWEB@gmail.com</p>
+            <p><i class="fas fa-phone me-3"></i> +2126 22 784 086</p>
+            <p><i class="fas fa-print me-3"></i> +2126 64 513 280</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      <marquee align="middle" behavior="scroll" direction="right" scrolldelay="10">
+        <h4>Si vous avez des questions n'hésitez pas à nous contacter.</h4>
+      </marquee>
+    </div>
+  </footer>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>

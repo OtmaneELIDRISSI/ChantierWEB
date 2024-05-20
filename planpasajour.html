@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ChantierWEB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon1.jpg" sizes="32x32" type="image/png">
+    
+    <style>
+        .hero-button {
+            background-color: #007bff; /* Bleu Bootstrap */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .hero-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .hero-image {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .alert-dynamic {
+            background-color: #ffcc00; /* Couleur jaune vif */
+            color: #000; /* Texte noir */
+            border: 2px solid #ff9900; /* Bordure orange vif */
+            animation: flash 1s infinite; /* Animation de clignotement */
+        }
+        @keyframes flash {
+            0% { background-color: #ffcc00; }
+            50% { background-color: #ff9900; }
+            100% { background-color: #ffcc00; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">ChantierWEB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="projets.html">Voir Projet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#introduction">Qui sommes nous?</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item" style="margin-right:60px;">
+                    <a class="nav-link link" href="index.html#inputEmail">Contactez-nous</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<br><br><br>
+
+<div class="alert alert-warning alert-dynamic text-center" role="alert">
+    <strong>Attention !</strong> Ce plan n'est pas à jour.
+</div>
+
+<br><br><br>
+<div class="text-center">
+    <a download="Mall.dwg">
+        <button class="hero-button">
+            <h1>TELECHARGEZ </h1>
+            <p>Les plans à jour</p>
+        </button>
+    </a>
+</div>
+
+
+<br><br><br><br><br><br><br><br>
+
+<footer class="text-center text-lg-start bg-light text-muted">
+    <br>
+    <section>
+        <div class="text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h4 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>ChantierWEB
+                    </h4>
+                    <p>Une plateforme dédiée à la gestion et au suivi des projets de construction en temps réel.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Produits</h6>
+                    <p><a href="#!" class="text-reset">Planning</a></p>
+                    <p><a href="#!" class="text-reset">Suivi des tâches</a></p>
+                    <p><a href="#!" class="text-reset">Rapports</a></p>
+                    <p><a href="#!" class="text-reset">Notifications</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Liens utiles</h6>
+                    <p><a href="#!" class="text-reset">Tarification</a></p>
+                    <p><a href="#!" class="text-reset">Paramètres</a></p>
+                    <p><a href="#!" class="text-reset">Commandes</a></p>
+                    <p><a href="#!" class="text-reset">Aide</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i>Berrechid </p>
+                    <p><i class="fas fa-envelope me-3"></i> info@chantierweb.com</p>
+                    <p><i class="fas fa-phone me-3"></i> +212 622 784 086</p>
+                    <p><i class="fas fa-print me-3"></i> +212 664 513 280</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 ChantierWEB. Tous droits réservés.
+    </div>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
