@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon1.jpg" sizes="32x32" type="image/png">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -47,6 +47,7 @@
   </div>
   <div class="text-center">
     <div id="qr-reader" style="width: 300px; margin: 0 auto;"></div>
+    <div id="qr-reader-results"></div>
   </div>
 
   <footer class="text-center text-lg-start bg-light text-muted">
@@ -86,15 +87,12 @@
     function startScan() {
       let qrCodeSuccessCallback = (decodedText, decodedResult) => {
         console.log(`Code décodé: ${decodedText}`);
-        if (decodedText === "votre_code_qr") {
-          window.location.href = "url_de_la_page_web";
-        } else {
-          Swal.fire({
-            icon: 'error',
-            title: 'Erreur',
-            text: 'Ce plan n\'est pas à jour!'
-          });
-        }
+        Swal.fire({
+          icon: 'success',
+          title: 'Code QR Scanné',
+          text: `URL: ${decodedText}`
+        });
+        document.getElementById("qr-reader-results").innerHTML = `<a href="${decodedText}" target="_blank">${decodedText}</a>`;
         html5QrCode.stop().then(ignore => {
           document.getElementById("qr-reader").innerHTML = "";
         }).catch(err => {
