@@ -43,6 +43,21 @@
             50% { background-color: #ff9900; }
             100% { background-color: #ffcc00; }
         }
+        /* Style for the table showing version history */
+        .version-history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        .version-history-table th, .version-history-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .version-history-table th {
+            background-color: #007bff;
+            color: white;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -85,7 +100,7 @@
 
 <br><br><br>
 <div class="text-center">
-  <a href="Mall.DWG" download="Mall.DWG">
+    <a href="https://otmaneelidrissi.github.io/ChantierWEB/Mall.DWG" download="Mall.dwg">
         <button class="hero-button">
             <h1>TELECHARGEZ </h1>
             <p>Les plans à jour</p>
@@ -93,6 +108,39 @@
     </a>
 </div>
 
+<!-- Section Historique des versions -->
+<br><br><br>
+<section id="historique">
+    <div class="container">
+        <h2 class="text-center">Historique des versions</h2>
+        <table class="version-history-table">
+            <thead>
+                <tr>
+                    <th>Date de mise à jour</th>
+                    <th>Modifications apportées</th>
+                    <th>Auteur des modifications</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example of version history entries -->
+                <tr>
+                    <td>12 Septembre 2024</td>
+                    <td>Correction de la structure du toit et ajout d'un accès supplémentaire.</td>
+                    <td>Architecte BENHMAMMOUCH Othmane </td>
+                    <td><a href="https://otmaneelidrissi.github.io/ChantierWEB/Mall.DWG" download="Mall.dwg">Télécharger</a></td>
+                </tr>
+                <tr>
+                    <td>30 Août 2024</td>
+                    <td>Révision des fondations et ajustement des dimensions du hall d'entrée.</td>
+                    <td>Ingénieur KORAICH Saber</td>
+                    <td><a href="https://otmaneelidrissi.github.io/ChantierWEB/Mall.DWG" download="Mall.dwg">Télécharger</a></td>
+                </tr>
+                <!-- More entries would be dynamically loaded from the database -->
+            </tbody>
+        </table>
+    </div>
+</section>
 
 <br><br><br><br><br><br><br><br>
 
