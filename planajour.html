@@ -19,29 +19,22 @@
             transition: background-color 0.3s, transform 0.3s;
             display: inline-block;
             text-align: center;
-            margin: 0 auto;
         }
         .hero-button:hover {
             background-color: #0056b3;
             transform: scale(1.05);
         }
-        .hero-image {
-            max-width: 50%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .alert-dynamic {
+            background-color: #ffcc00; /* Couleur jaune vif */
+            color: #000; /* Texte noir */
+            border: 2px solid #ff9900; /* Bordure orange vif */
+            animation: flash 1s infinite; /* Animation de clignotement */
+            text-align: center;
         }
-        .alert-custom {
-            background-color: #28a745; /* Vert Bootstrap */
-            color: white;
-            border: 2px solid #218838; /* Bordure vert foncé */
-            animation: pulse 1s infinite; /* Animation de pulsation */
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        @keyframes flash {
+            0% { background-color: #ffcc00; }
+            50% { background-color: #ff9900; }
+            100% { background-color: #ffcc00; }
         }
         /* Style for the table showing version history */
         .version-history-table {
@@ -52,11 +45,12 @@
         .version-history-table th, .version-history-table td {
             border: 1px solid #ddd;
             padding: 8px;
+            text-align: center;
         }
         .version-history-table th {
             background-color: #007bff;
             color: white;
-            text-align: left;
+            text-align: center;
         }
     </style>
 </head>
@@ -94,16 +88,16 @@
 
 <br><br><br>
 
-<div class="alert alert-custom text-center" role="alert">
-    Ce plan est à jour.
+<div class="alert alert-warning alert-dynamic mx-auto" role="alert" style="max-width: 600px;">
+    <strong>Attention !</strong> Ce plan n'est pas à jour.
 </div>
 
 <br><br><br>
 <div class="text-center">
     <a href="https://otmaneelidrissi.github.io/ChantierWEB/Mall.DWG" download="Mall.dwg">
-        <button class="hero-button">
+        <button class="hero-button mx-auto">
             <h1>TELECHARGEZ </h1>
-            <p>Les plans</p>
+            <p>Les plans à jour</p>
         </button>
     </a>
 </div>
@@ -111,9 +105,9 @@
 <!-- Section Historique des versions -->
 <br><br><br>
 <section id="historique">
-    <div class="container">
-        <h2 class="text-center">Historique des versions</h2>
-        <table class="version-history-table">
+    <div class="container text-center">
+        <h2>Historique des versions</h2>
+        <table class="version-history-table mx-auto" style="max-width: 800px;">
             <thead>
                 <tr>
                     <th>Date de mise à jour</th>
@@ -127,7 +121,7 @@
                 <tr>
                     <td>12 Septembre 2024</td>
                     <td>Correction de la structure du toit et ajout d'un accès supplémentaire.</td>
-                    <td>Architecte BENHMAMMOUCH Othmane</td>
+                    <td>Architecte BENHMAMMOUCH Othmane </td>
                     <td><a href="https://otmaneelidrissi.github.io/ChantierWEB/Mall.DWG" download="Mall.dwg">Télécharger</a></td>
                 </tr>
                 <tr>
